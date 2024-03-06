@@ -3,7 +3,7 @@ import "./config/mongoConnect.js"
 import websRouter from "./routes/webRouter.js";
 const app = express();
 /*  App Route */
-app.use("/api/apps", websRouter);
+app.use("/api/webs", websRouter);
 /* Middleware */
 app.use((err, req, res, next) => {
     res.status(500).send({ message: err.message });

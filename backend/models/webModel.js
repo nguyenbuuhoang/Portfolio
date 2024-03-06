@@ -16,5 +16,5 @@ const websSchema = new mongoose.Schema(
         timestamps:true,
     }
 );
-const Websites = mongoose.model("Websites",websSchema);
-export default Websites;
+const Webs = mongoose.model("Websites",websSchema);
+export default Webs;
