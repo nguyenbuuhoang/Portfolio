@@ -1,0 +1,1 @@
+export const MONGO_URL = "mongodb+srv://admin:buuhoang2001@portfolio.owogk9b.mongodb.net/?retryWrites=true&w=majority&appName=portfolio"
