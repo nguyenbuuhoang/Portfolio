@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../components/header/header";
-import WebsiteData from "../data/WebsiteData";
 import { WebsiteScreenComponent } from "../components/websiteScreenComponent/WebsiteScreenComponent";
 import MessageBox from "../components/boxes/MessageBox";
 import LoadingBox from "../components/boxes/LoadingBox";
@@ -32,7 +31,7 @@ function WebsiteScreen(props) {
       <div className="banner">
         <div className="overlay">
           <div className="container">
-            <h1>My Recent Websites</h1>
+            <h1>My Websites</h1>
             <button>
               <Link to="/">Home</Link>
             </button>

@@ -12,16 +12,16 @@ export default function footer() {
           </div>
           <div className="footerNav">
             <p>
+              <HashLink to="#">Home</HashLink>
+            </p>
+            <p>
               <HashLink to="#about">About me</HashLink>
             </p>
             <p>
               <HashLink to="#services">services</HashLink>
             </p>
             <p>
-              <HashLink to="#">blogs</HashLink>
-            </p>
-            <p>
-              <Link to="portifolio">Portifolio</Link>
+              <HashLink to="#works">work</HashLink>
             </p>
             <p>
               <HashLink to="#contact">contact me</HashLink>
@@ -29,32 +29,27 @@ export default function footer() {
           </div>
           <div className="footerMedias">
             <div className="footerMedia">
-              <a href="https://www.linkedin.com/in/laura-irene-paul">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-            <div className="footerMedia">
-              <a href="https://www.facebook.com/irene.mmassy.1466">
+              <a href="https://www.facebook.com/buuhoang.nguyen.37/">
                 <i className="fab fa-facebook-f"></i>
               </a>
             </div>
             <div className="footerMedia">
-              <a href="https://www.instagram.com/minaheryy/">
+              <a href="https://github.com/nguyenbuuhoang">
+                <i className="fab fa-github-alt"></i>
+              </a>
+            </div>
+            <div className="footerMedia">
+              <a href="#">
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
             <div className="footerMedia">
-              <a href="https://www.behance.net/laummassy01ce">
-                <i className="fab fa-behance"></i>
-              </a>
-            </div>
-            <div className="footerMedia">
-              <a href="https://github.com/irenemmassy">
-                <i className="fab fa-github-alt"></i>
+              <a href="#">
+                <i className="fab fa-youtube"></i>
               </a>
             </div>
           </div>
-          <span>Copyright ©2020 All rights reserved </span>
+          <span>Copyright ©2024 All rights reserved </span>
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@ export const RecentWeb = (props) => {
         <div className="shopBack">
           <img src={website.image} alt={website.name} />
           <div className="shoplebal">
-            <a href={`/websites/${website.id}`}>Read More</a>
+            <a href={`/websites/${website._id}`}>Read More</a>
           </div>
         </div>
         <div className="shoptext">

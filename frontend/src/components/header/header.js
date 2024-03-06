@@ -13,17 +13,17 @@ export default function header(props) {
           </div>
           <div className="nav2">
             <div className="menu">
+              <HashLink to="#">Home</HashLink>
+            </div>
+            <div className="menu">
               <HashLink to="#about">about Me</HashLink>
             </div>
             <div className="menu">
               <HashLink to="#services">services</HashLink>
             </div>
             <div className="menu">
-              <HashLink to="#">Blogs</HashLink>
+              <HashLink to="#works">Work</HashLink>
             </div>
-{/*             <div className="menu">
-              <Link to="/portfolio">Portifolio</Link>
-            </div> */}
             <div className="menu">
               <HashLink to="#contact">contact Me</HashLink>
             </div>

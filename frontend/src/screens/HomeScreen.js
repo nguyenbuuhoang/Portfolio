@@ -3,10 +3,28 @@ import Section from "../components/section/section";
 import Header from "../components/header/header";
 import { Link } from "react-router-dom";
 import ContactComponent from "../components/contactComponent/ContactComponent.js";
-import WebsiteData from "../data/WebsiteData.js";
+import axios from "axios"; // Thêm dòng này để import axios
 import { RecentWeb } from "../components/recentComponent/RecentWeb.js";
 
 function HomeScreen(props) {
+  const [webs, setWebs] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const { data } = await axios.get("/api/webs");
+        setLoading(false);
+        setWebs(data);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -45,7 +63,7 @@ function HomeScreen(props) {
               <div className="screenWords">
                 <h1>Hello, I'm Hoang.</h1>
                 <p>
-                  I am a full-stack developer specializing in crafting
+                  I'm a Backend developer specializing in crafting
                   outstanding, cutting-edge and websites. Please feel free to
                   explore my latest projects. You can contact me at
                   buuhoanglx@gmail.com or via phone at +84 397084144.
@@ -126,13 +144,13 @@ function HomeScreen(props) {
         </div>
       </div>
       {/* Blog */}
-      <div className="container" id="blogs">
+      <div className="container" id="works">
         <div className="article">
           <h2>Recent Work</h2>
           <hr />
           <div className="rows">
-            {WebsiteData.websites.slice(0, 2).map((website) => (
-              <RecentWeb key={website.id} website={website}></RecentWeb>
+            {webs.slice(0, 2).map((website) => (
+              <RecentWeb key={website._id} website={website}></RecentWeb>
             ))}
             ;
           </div>
