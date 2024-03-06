@@ -8,7 +8,7 @@ export const WebsiteScreenComponent = (props) => {
         <div className="blogBox_pic">
           <img src={website.image} alt={website.name} />
           <div className="blogLebal">
-          <a href={`/websites/${website.id}`}>Project Details</a>
+          <a href={`/websites/${website._id}`}>Project Details</a>
           </div>
         </div>
         <div className="blog_text">
